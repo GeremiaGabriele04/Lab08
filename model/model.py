@@ -11,8 +11,9 @@ class Model:
 
 
     def worstCase(self, nerc, maxY, maxH):
-        # TO FILL
-        pass
+        self.loadEvents(nerc)
+        return self._listEvents
+
     def ricorsione(self, parziale, maxY, maxH, pos):
         # TO FILL
         pass
