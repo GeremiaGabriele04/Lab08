@@ -22,8 +22,11 @@ class Controller:
             return
 
         risultati = self._model.worstCase(nerc, int(maxY), int(maxH))
-        for r in risultati:
-            self._view._txtOut.controls.append(ft.Text(str(r)))
+        self._view._txtOut.controls.append(ft.Text("Di seguito il numero totale di persone coivolte e gli eventi:"))
+        self._view._txtOut.controls.append(ft.Text(risultati[1]))
+        for e in risultati[0]:
+            self._view._txtOut.controls.append(ft.Text(e))
+
         self._view.update_page()
 
 

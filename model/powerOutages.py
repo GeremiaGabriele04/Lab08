@@ -61,8 +61,7 @@ class Event:
         # return (f"PowerOutage [id={self._id}, nerc={self._nerc_id}, customers_affected={self._customers_affected} "
         #         f"start_time={self._date_event_began}, end_time= {self._date_event_finished}]")
 
-        return (f"id={self._id}, customers_affected={self._customers_affected} "
-                f"start_time={self._date_event_began}, end_time= {self._date_event_finished}")
+        return f"{self._id} - {self._customers_affected} == {self._date_event_began} / {self._date_event_finished}"
 
     def __hash__(self):
         return hash(self._id)
